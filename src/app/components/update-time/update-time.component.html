@@ -1,0 +1,153 @@
+<div class="row justify-content-center">
+    <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12 col-12 text-center">
+        <div class="quiddiya_style">
+            <div class="heading">
+                <h1>CHOOSE DATE</h1>
+            </div>
+            <div class="choose_date">
+                <div class="row">
+                    <div class="col-md-4 text-left">
+                        <h3>JANUARY 2020</h3>
+                        <mat-calendar #calender></mat-calendar>
+                    </div>
+                    <div class="col-md-4 text-left choose-time">
+                        <h3>CHOOSE TIME</h3>
+                        <ul class="choose_time">
+                            <li><a>8:00 - 9:00</a></li>
+                            <li class="active"><a>9:00 - 10:00</a></li>
+                            <li class="active"><a>10:00 - 11:00</a></li>
+                            <li><a>11:00 - 12:00</a></li>
+                            <li><a>12:00 - 13:00</a></li>
+                            <li><a>13:00 - 14:00</a></li>
+                            <li><a>14:00 - 15:00</a></li>
+                            <li><a>15:00 - 16:00</a></li>
+                            <li class="inActive"><a>16:00 - 17:00</a></li>
+                            <li><a>17:00 - 18:00</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-md-4 text-left choose-slot">
+                        <mat-radio-group aria-label="Select an option">
+                            <ul class="final_date">
+                                <h3>
+                                    <mat-radio-button value="1">Slot 1</mat-radio-button>
+                                    <a><img src="./assets/img/cross-icon02.svg" /></a>
+                                </h3>
+                                <li><label>DATE:</label>12 JANUARY 2020</li>
+                                <li><label>TIME:</label>9:00 - 11:00</li>
+                            </ul>
+                            <ul class="final_date">
+                                <h3><mat-radio-button value="2">Slot 2</mat-radio-button>
+                                    <a><img src="./assets/img/cross-icon02.svg" /></a>
+                                </h3>
+                                <li><label>DATE:</label>12 JANUARY 2020</li>
+                                <li><label>TIME:</label>9:00 - 11:00</li>
+                            </ul>
+                        </mat-radio-group>
+                    </div>
+                </div>
+            </div>
+
+            <div class="next">
+                <a (click)="back()" class="cancel">Back</a>
+                <a (click)="update()">Update</a>
+            </div>
+            <div class="grid">
+                <div class="table-responsive" style="width: 100%;">
+                    <table class="table">
+
+                        <tr>
+                            <th>
+                                <p>Thead</p>
+                            </th>
+                            <th>
+                                <p>Thead</p>
+                            </th>
+                            <th>
+                                <p>Thead</p>
+                            </th>
+                            <th>
+                                <p>Thead</p>
+                            </th>
+                            <th>
+                                <p>Thead</p>
+                            </th>
+                        </tr>
+
+                        <tr>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                            <td>
+                                <p>&nbsp;</p>
+                            </td>
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,396 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+@import '~@angular/cdk/overlay-prebuilt.css';
+
+body{margin: 0px; padding: 0px; background-color:#ececec;}
+h1, p, a, button{font-family: 'SegoeUIR';}
+a{display: inline-block;}
+ul{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+$primery-color:#00216a;
+$secondary-color:#00b5e2;
+$gray-color:#838383;
+$small-font:1em;
+$midium-font: 1.2em;
+$large-font: 2em;
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type=number] {
+  -moz-appearance: textfield; }
+input:focus, textarea:focus{outline: none;}
+.form-control{border-color:$primery-color}
+
+
+.mat-expansion-panel{box-shadow: 0px 0px 0px !important; border-bottom: 1px solid $secondary-color; border-radius: 0px !important; margin-bottom: 0px;}
+.mat-expansion-panel-header-description{margin-right: 0px;}
+
+.mat-radio-button.mat-accent .mat-radio-inner-circle{background-color: $secondary-color;}
+.mat-radio-button.mat-accent.mat-radio-checked .mat-radio-outer-circle{border-color: $secondary-color;}
+
+@mixin btn_style($bgColor){
+    font-size: $small-font;
+    background-color: $bgColor;
+    border:1px solid $bgColor;
+    color: #ffffff;
+    border-radius: 35px;
+    text-transform: uppercase;
+    padding: 9px 30px;
+    width: auto;
+    &:hover{
+        background-color: transparent;
+        color: $bgColor;
+    }
+}
+
+%flexPrpperty{
+    display: flex;
+    flex-wrap: wrap;
+}
+.mat-form-field{width:100%;}
+header{
+    padding: 20px 0px;
+    background-color: #ffffff;
+    .header_right{
+        button{
+            font-size: $small-font;
+            text-transform: uppercase;
+            border-radius: 3px;
+            padding: 7px 30px;
+            border:1px solid #868686;
+            background-color: #ffffff;
+            color:$primery-color;
+            &:hover{
+                background-color: $secondary-color;
+                color:#ffffff;
+            }
+        }
+    }
+}
+.banner{
+    background: url("/assets/img/bg.jpg") no-repeat top center;
+    background-attachment: fixed;
+    min-height: 250px;
+}
+.next{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 60px;
+    a{
+        @include btn_style($bgColor: $primery-color);
+        &:nth-child(2){
+            margin-left: 71px;
+        }
+    }
+    a.cancel{
+        @include btn_style($bgColor: #939393);
+    }
+    a.back-to-home{
+        width: 200px;
+    }
+}
+.quiddiya{
+    margin-top: 2%;
+    &_style{
+        background-color: #ffffff;
+        border-radius: 5px;
+        border:1px solid $gray-color;
+        padding: 6% 0%;
+        margin-bottom: 5%;
+        .heading{
+            margin-bottom: 10px;
+            h1{
+                font-size: $large-font;
+                color: $primery-color;
+                margin-bottom: 0px;
+            }
+            p{
+                font-size: $midium-font;
+                color: $secondary-color;
+                text-transform: uppercase;
+            }
+        }
+        
+        .btn_group{
+            width: 50%;
+            margin:0 auto;
+            button{
+                width: 100%;
+                background-color: #ffffff;
+                border:1px solid #868686;
+                font-size: $small-font;
+                border-radius: 3px;
+                font-weight: 400;
+                color:$primery-color;
+                margin-bottom: 10px;
+                padding: 7px 0px;
+                &:last-child{
+                    margin-bottom: 0px;
+                }
+                &:active{
+                    background-color: $secondary-color;
+                    color:#ffffff;
+                }
+                &:hover{
+                    background-color: $secondary-color;
+                    color:#ffffff;
+                }
+            }
+            button.active{
+                background-color: $secondary-color;
+                color:#ffffff;
+            }
+        }
+    }
+}
+
+.add_delegate{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+    margin-bottom: 30px;
+    .added{
+        flex:1;
+        span{
+            display: inline-block;
+            width: 60px;
+            height: 60px;
+            border:1px solid $gray-color;
+            border-radius: 35px;
+            font-size: $large-font;
+            color: $secondary-color;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 400;
+        }
+        
+    }
+    form{
+        flex:5;
+        .new_added{
+            color: $secondary-color;
+            font-size: $small-font;
+        }
+    }
+}
+.request_form{
+    width: 50%;
+    margin:0 auto;
+    p, a{
+        font-size: $small-font;
+        color: $gray-color;
+        margin-bottom: 0px;
+    }
+    
+}
+.delegate_details_section{
+    padding: 0px 0px;
+    padding-right: 15px;
+    .heading{
+        display: flex;
+        align-items: flex-start;
+        margin-bottom: 30px;
+        justify-content: space-between;
+        padding-right: 0px;
+        p{
+            margin-bottom: 0px;
+            text-align: right;
+            color: $secondary-color;
+        }
+    }
+}
+
+@media only screen and (max-width:1920px){
+    .banner{
+        min-height: 500px;
+    }
+}
+@media only screen and (min-width:1280px){
+    header{
+        padding: 7px 0px;
+        .logo{
+            img{
+                max-width: 75%;
+            }
+        }
+    }
+    .banner{
+        min-height: 350px;
+    }
+}
+@media only screen and (max-width:1024px){
+    .quiddiya_style .heading h1{
+        font-size: 1.7em;
+    }
+}
+@media only screen and (max-width:990px){
+    header{
+        padding: 7px 0px;
+        .logo{
+            img{
+                max-width: 75%;
+            }
+        }
+    }
+    .quiddiya_style .heading h1{
+        font-size: 1.6em;
+    }
+}
+@media only screen and (max-width:991px){
+    .banner {
+        min-height: 310px;
+    }
+    header{
+        padding: 7px 0px;
+        .logo{
+            img{
+                max-width: 62%;
+            }
+        }
+    }
+    .quiddiya_style .heading h1{
+        font-size: 1.3em;
+    }
+    .quiddiya_style .heading p{
+        font-size: $small-font;
+    }
+}
+@media only screen and (max-width:767px){
+    header{
+        .logo{
+            margin-bottom: 10px;
+        }
+    } 
+    .banner {
+        min-height: 210px;
+    }
+    .quiddiya_style .heading h1{
+        font-size: 1.4em;
+    }
+    .request_form{
+        width:63%;
+    }
+
+    .delegate_details_section{
+        margin: 20px 15px 0px 15px;
+        .heading{
+            margin-bottom: 15px;
+        }
+    }
+}
+@media only screen and (max-width:575px){
+    header .header_right button{
+        font-size: 0.9em;
+                padding: 6px 18px;
+    }
+    .quiddiya_style{
+        .heading{
+            h1{
+                font-size: 1.3em;
+            }
+            p{
+                font-size: 1em;
+            }
+        } 
+    } 
+    .next{
+        margin-top: 30px;
+        a.cancel, a{
+            width: auto;
+        padding: 6px 30px 8px;
+        }
+    }
+    .no-of-delegates-style{
+        min-height: 390px;
+        .no-of-delegates{
+            input[type="number"]{
+                width: 73px;
+                height: 43px
+            }
+        }
+    }
+    .register_member{
+        h3{
+            font-size: 1.3em;
+        }
+        p{
+            font-size: $small-font;
+        }
+    }
+    .add_delegate{
+        padding: 0px 15px;
+        .added{
+            span{
+                width: 45px;
+                height: 45px;
+                font-size: $small-font;
+            }
+        }
+    }
+}
+@media only screen and (max-width:480px){
+    header .header_right button{
+        font-size: 0.8em;
+                padding: 6px 18px;
+    }
+    .quiddiya_style{
+        .heading{
+            h1{
+                font-size: 1.1em;
+            }
+            p{
+                font-size: 0.9em;
+                margin-bottom: 0px;
+            }
+        }
+        .btn_group{
+            width: 90%;
+            button{
+                font-size: 0.8em;
+            }
+        }
+    } 
+    .request_form{
+        width:90%;
+    }
+    .next{
+        margin-top: 30px;
+        a.cancel, a{
+            padding: 4px 30px 6px;
+            font-size: 0.9em;
+        }
+    }
+    .no-of-delegates-style{
+        min-height: 340px;
+    }
+    .add_delegate{
+        flex-direction: column;
+        margin-bottom: 15px;
+        .added{
+            flex:1;
+            span{
+                margin:0 auto 20px;
+            }
+        }
+        form{
+            flex:1;
+        }
+    }
+}
+@media only screen and (max-width:360px){
+    .request_form{
+        width:95%;
+    }
+}
+@media only screen and (max-width:320px){
+
+}

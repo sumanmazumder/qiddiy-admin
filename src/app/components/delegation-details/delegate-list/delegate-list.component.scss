@@ -1,0 +1,45 @@
+@import '../../../../styles.scss';
+
+.delegate_details_left{
+    border-radius: 15px;
+    border:1px solid $primery-color;
+    height: 100%;
+    overflow: hidden;
+    h3{
+        font-size: $midium-font;
+        color: $primery-color;
+        margin-bottom: 0px;
+        text-transform: uppercase;
+    }
+    ul{
+        
+        
+        width: 100%;
+        li{
+            
+            a{
+                font-size: $midium-font;
+                color: $primery-color;
+                padding: 10px 0px;
+                padding-left: 30px;
+                width: 100%;
+                &:hover{
+                    background-color: $secondary-color;
+                    
+                }
+            }
+            .active{
+                background-color: $secondary-color;
+                color:#fff;
+            }
+        }
+    }
+    .logOut{
+        text-transform: uppercase;
+        color: $gray-color;
+        margin-top: 15px;
+        font-size: $midium-font;
+        border:0px;
+        background-color: transparent;
+    }
+}
